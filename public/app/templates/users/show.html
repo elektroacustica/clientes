@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1">
+			<section class="profile">
+				<div class="profile-heading">
+					<img src="public/img/avatar{{user.id}}.png" id="img" />
+					<!-- <img src="public/img/{{user.img}}.png" id="img" /> -->
+					<a ui-sref=".info" ui-sref-active="active"><span class="profile-item">Infomación</span></a>
+					<a ui-sref=".password" ui-sref-active="active"><span class="profile-item">Password</span></a>
+					<a ui-sref=".pay" ui-sref-active="active"><span class="profile-item">Metódo de Pago</span></a>
+					<a ui-sref=".licence" ui-sref-active="active"><span class="profile-item">Licencia</span></a>
+					<a href="#/mensajes" ui-sref-active="active"><span class="profile-item">Mensajes</span></a>
+				</div>
+				<div class="profile-body">
+					<div ui-view></div> 
+				</div>
+			</section>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<h3><span class="label label-success">INFORMACION BASICA</span></h3>
+<div>
+	<div class="profile-option">
+		<a ui-sref="user" class="btn btn-success btn-xs"><i class="fa fa-reply"></i></a>
+	</div>
+</div>
+<label for="">Nombres</label>
+<input ng-model="user.nombres" class="form-control" ng-readonly="readonly">
+<label for="">Usuario</label>
+<input class="form-control" value="{{user.usuario}}" ng-readonly="readonly"> 
+<label for="">Telefono: </label>
+<input class="form-control" value="{{user.telefono}}" ng-readonly="readonly">
+<label for="">Email:</label>
+<input class="form-control" value="{{user.email}}" ng-readonly="readonly">
+<div class="btn-footer">
+	<a ui-sref="userShow" class="btn btn-default" ng-click="toastCancel()">Cancelar</a>
+	<button class="btn btn-primary" ng-click="edit()">{{readonly? "Editar":"Guardar"}} Info</button>
+</div>

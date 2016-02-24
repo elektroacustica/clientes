@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="row" ng-show="users">
+		<div class="col-md-10 col-md-offset-1">
+			<h1>Usuarios</h1>
+			<div class="form-search">
+				<button type="button" class="tcon tcon-search--xcross" aria-label="toggle search">
+					<span class="tcon-search__item" aria-hidden="true"></span>
+					<span class="tcon-visuallyhidden">toggle search</span>
+				</button>
+			</div>
+			<table class="table table-hover">
+				<thead>
+					<tr class="label-primary">
+						<th>ID</th>
+						<th>USUARIO</th>
+						<th>NOMBRES</th>
+						<th>ALTA</th>
+						<th>OPCIONES</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="user in users">
+						<td>{{user.id}}</td>
+						<td>{{user.usuario}}</td>
+						<td>{{user.nombres}}</td>
+						<td>{{user.created_at}}</td>
+						<td><a ui-sref="userShow.info({id: user.id})" class="btn btn-default btn-xs btn-block">mas</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-1 col-md-offset-5">
+			<span class="tcon-loader--spinner360" aria-label="loading" ng-show="!users">
+				<span class="tcon-visuallyhidden">loading</span>
+			</span>
+		</div>
+	</div>
+
+</div>

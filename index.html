@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client</title>
+	
+	<link rel="stylesheet" href="public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="public/css/toastr.min.css">
+	<link rel="stylesheet" href="public/css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="public/js/jquery.min.js"></script>
+	<script src="public/js/toastr.min.js"></script>
+	<script src="public/js/main.js"></script>
+
+	<!-- Angular -->
+	<script src="public/app/vendor/angular.min.js"></script>
+	<script src="public/app/vendor/angular-ui-router.min.js"></script>
+	<script src="public/app/vendor/angular-resource.min.js"></script>
+
+	<!-- Scipts Angular -->
+	<script src="public/app/app.js"></script>
+
+	<!-- Controllers Angular -->
+	<script src="public/app/controllers/userController/userController.js"></script>
+	<script src="public/app/controllers/userController/userDetailController.js"></script>
+	<script src="public/app/controllers/userController/userUpdateController.js"></script>
+
+	<!-- Routes Angular -->
+	<script src="public/app/routes/routes.js"></script>
+
+	<!-- Services Angular -->
+	<script src="public/app/services/userResource.js"></script>
+
+</head>
+<body ng-app="app">
+<nav class="container">
+	<div class="navbar navbar-inverse">
+		<a ui-sref="home" class="navbar-brand">FirstSoft</a>
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapase" data-target="#menu">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="menu">
+			<ul class="nav navbar-nav navbar-right">
+				<li ui-sref-active="active"><a ui-sref="login">login</a></li>
+				<li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+				<li ui-sref-active="active"><a ui-sref="user">usuarios</a></li>
+				<li ui-sref-active="active"><a ui-sref="404">otros</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div ui-view></div>
+
+</body>
+</html>
