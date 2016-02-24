@@ -3,6 +3,6 @@
 		.factory("userResource", ["$resource", userResource]);
 
 	function userResource($resource){
-		return $resource("http://localhost/rest/public/v1/usuarios/:id");
+		return $resource("http://189.129.183.156/rest/public/v1/usuarios/:id");
 	};
 }());
